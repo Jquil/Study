@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <input type="text" placeholder="请输入用户编号" id="Id"/>
+    <input type="text" placeholder="请输入用户名" id="Name"/>
+    <input type="button" value="登录" onclick="login()"/>
+</body>
+<script>
+    var ws = new WebSocket('ws://192.168.0.179:8181')
+    ws.onopen = function() {
+        console.log('open')
+    }
+
+    ws.onmessage = function(evt) {
+        let data = JSON.parse(evt.data)
+        switch(data.Code){
+            case 0:
+                console.log('登录成功')
+                break
+            case 1:
+                console.log('登出成功')
+                break
+            case 2:
+                console.log('账号在别处登录，若非本人操作，请及时修改密码')
+                break
+        }
+    }
+
+    ws.onclose = function() {
+        console.log('close')
+    }
+
+    function login(){
+        var data = {
+            Id:document.getElementById('Id').value,
+            Name:document.getElementById('Name').value
+        }
+        var req = {
+            Code: 0,
+            Message:JSON.stringify(data)
+        }
+        ws.send(JSON.stringify(req))
+    }
+</script>
+</html>
