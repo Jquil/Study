@@ -1,0 +1,7 @@
+F:\Csharp\console\SerialPort\ESP.SerialPort\Console\bin\Debug\Console.exe.config
+F:\Csharp\console\SerialPort\ESP.SerialPort\Console\bin\Debug\Console.exe
+F:\Csharp\console\SerialPort\ESP.SerialPort\Console\bin\Debug\Console.pdb
+F:\Csharp\console\SerialPort\ESP.SerialPort\Console\obj\Debug\Console.csproj.AssemblyReference.cache
+F:\Csharp\console\SerialPort\ESP.SerialPort\Console\obj\Debug\Console.csproj.CoreCompileInputs.cache
+F:\Csharp\console\SerialPort\ESP.SerialPort\Console\obj\Debug\Console.exe
+F:\Csharp\console\SerialPort\ESP.SerialPort\Console\obj\Debug\Console.pdb
